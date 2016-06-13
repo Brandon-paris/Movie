@@ -4,6 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
+
 <h2>Details</h2>
 
 <div>
@@ -55,6 +56,105 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Rating)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IMDB)
+        </dt>
+        <dd>
+
+            @if (Model.IMDB == 10)
+            {
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+
+            }
+            
+            @if (Model.IMDB <= 10 && Model.IMDB > 9)
+            {
+                <i class="fa fa-star"></i>  
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            }
+            @if (Model.IMDB <= 9 && Model.IMDB > 8)
+            {
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            }
+            @if (Model.IMDB <= 8 && Model.IMDB > 7)
+            {
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+               
+            }
+            @if (Model.IMDB <= 7 && Model.IMDB > 6)
+            {
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            }
+            @if (Model.IMDB <= 6 && Model.IMDB > 5)
+            {
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            }
+            @if (Model.IMDB <= 5 && Model.IMDB > 4)
+            {
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            }
+            @if (Model.IMDB <= 4 && Model.IMDB > 3)
+            {
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            }
+            @if (Model.IMDB <= 3 && Model.IMDB > 2)
+            {
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                
+            }
+            @if (Model.IMDB <= 2 && Model.IMDB > 2)
+            {
+                <i class="fa fa-star"></i>
+                
+            }
+         
         </dd>
     </dl>
 </div>

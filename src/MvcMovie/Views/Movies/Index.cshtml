@@ -12,7 +12,7 @@
 
 <form asp-controller="Movies" asp-action="Index" method="get">
     <p>
-        <select asp-for="movieGenre" asp-items="Model.genres">
+        <select asp-for="movieGenre" asp-items="Model.genres    ">
             <option value="">All</option>
         </select>
 
@@ -22,7 +22,9 @@
 </form>
 
 <table class="table">
+
     <tr>
+        
         <th>
             @Html.DisplayNameFor(model => model.movies[0].Director)
         </th>
@@ -44,38 +46,49 @@
         <th>
             @Html.DisplayNameFor(model => model.movies[0].Rating)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movies[0].IMDB)
+        </th>
     </tr>
     <tbody>
-        @foreach (var item in Model.movies)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Director)
-                </td>
-                <td>
-                    <a href="@item.Trailer"> <img src="@item.Poster" title="Click for '@item.Title' Trailer"/> </a>
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Genre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ReleaseDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Rating)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
+      
+
+    @foreach (var item in Model.movies)
+     {
+       
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Director)
+            </td>
+            <td>
+                <a href="@item.Trailer"> <img src="@item.Poster" title="Click for '@item.Title' Trailer" /> </a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IMDB)
+
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+    }
+</tbody>
 </table>

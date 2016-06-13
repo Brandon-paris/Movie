@@ -6,6 +6,7 @@ namespace MvcMovie.Models
     public class Movie
     {
 
+        public float IMDB { get; set; }
         public string Director { get; set; }
         public int ID { get; set; }
         [StringLength(60, MinimumLength =3)]

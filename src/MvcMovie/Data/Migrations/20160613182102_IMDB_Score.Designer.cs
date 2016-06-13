@@ -8,9 +8,10 @@ using MvcMovie.Data;
 namespace MvcMovie.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160613182102_IMDB_Score")]
+    partial class IMDB_Score
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
@@ -182,7 +183,7 @@ namespace MvcMovie.Data.Migrations
                         .IsRequired()
                         .HasAnnotation("MaxLength", 30);
 
-                    b.Property<float>("IMDB");
+                    b.Property<string>("IMDB_Score");
 
                     b.Property<string>("Poster");
 
