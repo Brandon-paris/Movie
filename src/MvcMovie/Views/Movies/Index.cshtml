@@ -16,7 +16,7 @@
             <option value="">All</option>
         </select>
 
-        Title: <input type="text" name="SearchString">
+        Title/Director: <input type="text" name="SearchString">
         <input type="submit" value="Filter" />
     </p>
 </form>
@@ -24,7 +24,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayFor(model => model.movies[0].Director)
+            @Html.DisplayNameFor(model => model.movies[0].Director)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.movies[0].Poster)

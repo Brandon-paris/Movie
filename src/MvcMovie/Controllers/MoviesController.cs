@@ -31,7 +31,8 @@ namespace MvcMovie.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                movies = movies.Where(s => s.Title.Contains(searchString));
+                movies = movies.Where(s => s.Title.Contains(searchString) || s.Director.Contains(searchString));
+
             }
 
             if (!String.IsNullOrEmpty(movieGenre))
@@ -39,11 +40,13 @@ namespace MvcMovie.Controllers
                 movies = movies.Where(x => x.Genre == movieGenre);
             }
 
+
             var movieGenreVM = new MovieGenreViewModel();
             movieGenreVM.genres = new SelectList(await genreQuery.Distinct().ToListAsync());
             movieGenreVM.movies = await movies.ToListAsync();
 
             return View(movieGenreVM);
+
         }
 
         // GET: Movies/Details/5
