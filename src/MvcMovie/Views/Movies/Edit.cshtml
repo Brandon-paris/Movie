@@ -13,6 +13,13 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="ID" />
         <div class="form-group">
+            <label asp-for="Director" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Director" class="form-control" />
+                <span asp-validation-for="Director" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
             <label asp-for="Trailer" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="Trailer" class="form-control" />

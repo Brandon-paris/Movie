@@ -24,6 +24,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayFor(model => model.movies[0].Director)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.movies[0].Poster)
         </th>
         <th>
@@ -46,6 +49,9 @@
         @foreach (var item in Model.movies)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Director)
+                </td>
                 <td>
                     <a href="@item.Trailer"> <img src="@item.Poster" title="Click for '@item.Title' Trailer"/> </a>
                 </td>

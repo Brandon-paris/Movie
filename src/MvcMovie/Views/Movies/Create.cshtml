@@ -12,6 +12,13 @@
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
+            <label asp-for="Director" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Director" class="form-control" />
+                <span asp-validation-for="Director" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
             <label asp-for="Poster" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="Poster" class="form-control" />
